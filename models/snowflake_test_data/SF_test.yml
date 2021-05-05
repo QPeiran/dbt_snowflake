@@ -1,0 +1,9 @@
+version: 1
+
+sources:
+  - name: snowflake_sample_data_ref
+    description: "some pubplic data lives in snowflake"
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCDS_SF10TCL
+    tables:
+      - name: store_sales
