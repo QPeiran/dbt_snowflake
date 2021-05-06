@@ -8,3 +8,14 @@ sources:
     tables:
       - name: store_sales
         description: "SF10TCL store sales"
+
+models:
+    - name: snowflake_model_1
+      description: "A snowflake model"
+      columns:
+          - name: sale_price
+            description: "The sale price"
+            tests:
+                - not_null
+                - dbt_utils.expression_is_true: # from dbt.utils doc 
+                    expression: "sale_price > 0"
