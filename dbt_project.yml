@@ -35,7 +35,7 @@ models:
   sf_dbt_pr: # <== 2/3
       # Applies to all files under models/example/
       example:
-          +materialized: view
+          +materialized: table
           +schema: example
       snowflake_test_data:
           +materialized: view
