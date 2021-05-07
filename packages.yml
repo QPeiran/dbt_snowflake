@@ -1,2 +1,5 @@
+# packages:
+  # - git: "https://github.com/fishtown-analytics/dbt-utils.git" # git URL
 packages:
-  - git: "https://github.com/fishtown-analytics/dbt-utils.git" # git URL
+  - package: fishtown-analytics/dbt_utils
+    version: 0.6.4
