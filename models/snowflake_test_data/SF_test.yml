@@ -17,8 +17,9 @@ models:
             description: "The item's sale price less equal to 0"
             tests:
                 - not_null
-                - dbt_utils.expression_is_true: # from dbt.utils doc 
-                    expression: "sale_price = 0" 
-                    description: "any negative prices or are all zeros"
+                - is_positive
+                # - dbt_utils.expression_is_true: # from dbt.utils doc 
+                #     expression: "sale_price >= 0" 
+                #     description: "testing no negative price value"
     - name: snowflake_model_abnormal_price_details
       description: "abormal price in details"
